@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="Shift_JIS" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Insert title here</title>
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="2" width="100%">
+    <tr bgcolor="#FFCC00">
+        <td nowrap height="16">{$title}</td>
+        <td nowrap height="16">得票数</td>
+        <td nowrap height="16">割合</td>
+    </tr>
+    <!-- {section name=q loop=$questions} -->
+    <tr>
+    	<td>{$questions[q].str}</td>
+    	<td>{$questions[q].votes}</td>
+    	<td>{$questions[q].per}</td>
+    </tr>
+    <!-- {/section} -->
+</table>
+
+</body>
+</html>
