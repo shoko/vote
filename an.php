@@ -1,19 +1,19 @@
 <?php
-//ƒAƒ“ƒP[ƒg“Š•[ŠÖ”
+//ã‚¢ãƒ³ã‚±ãƒ¼ãƒˆæŠ•ç¥¨é–¢æ•°
 function an() {
 	include("smarty/Smarty.class.php");
 	$qfile = "data/question.txt";
 	$datafile = "data/vote.dat";
-	$title = "‚ ‚ ‚ ";
+	$title = "ã‚ã‚ã‚";
 	
-	//ƒAƒ“ƒP[ƒg‚ğ“Ç‚İo‚·
+	//ã‚¢ãƒ³ã‚±ãƒ¼ãƒˆã‚’èª­ã¿å‡ºã™
 	$questions = array();
 	
 	$fn = fopen($qfile,"rw");
 	if($fn === false) {
-		exit("¿–âƒtƒ@ƒCƒ‹‚ª“Ç‚İo‚¹‚Ü‚¹‚ñ");
+		exit("è³ªå•ãƒ•ã‚¡ã‚¤ãƒ«ãŒèª­ã¿å‡ºã›ã¾ã›ã‚“");
 	}
-	//¿–âƒtƒ@ƒCƒ‹‚ğ“Ç‚İo‚·
+	//è³ªå•ãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿å‡ºã™
 	while(!feof($fn)) {
 		$str = trim(fgets($fn));
 		if(strlen($str) == 0) {
@@ -32,7 +32,7 @@ function an() {
 	return $smarty->fetch('an.tpl');
 }
 
-////ƒAƒ“ƒP[ƒgŒ‹‰Ê•\¦ŠÖ”
+////ã‚¢ãƒ³ã‚±ãƒ¼ãƒˆçµæœè¡¨ç¤ºé–¢æ•°
 function vote_total() {
 	include("smarty/Smarty.class.php");
 	$qfile = "data/question.txt";
@@ -43,7 +43,7 @@ function vote_total() {
 	$n_vote = 0;
 	$n_q =0;
 	$subtotal = 0;
-	$title = "‚ ‚ ‚ ";	
+	$title = "ã‚ã‚ã‚";	
 	while(!feof($fq)) {
 		$str = trim(fgets($fq));
 		if(strlen($str) == 0) {
